@@ -129,7 +129,7 @@ section{padding:80px 20px;background:#fff}
 /* ── プラン ── */
 .plan-section{background:#F9FAF9}
 .plan-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
-@media(min-width:600px){.plan-grid{grid-template-columns:1fr 1fr 1fr}}
+@media(min-width:600px){.plan-grid{grid-template-columns:1fr 1fr;max-width:720px;margin-left:auto;margin-right:auto}}
 .plan-card{background:#fff;border-radius:var(--r);padding:28px 22px;box-shadow:0 2px 12px rgba(0,0,0,.05);position:relative;border:2px solid transparent;transition:transform .15s}
 .plan-card:hover{transform:translateY(-3px)}
 .plan-card.recommended{border-color:var(--p)}
@@ -616,23 +616,10 @@ footer a{color:var(--p);text-decoration:underline}
           <div class="plan-feat">クラウド同期</div>
           <div class="plan-feat">マルチデバイス対応</div>
           <div class="plan-feat">永久利用権</div>
-          <div class="plan-feat muted">グループ機能</div>
-        </div>
-      </div>
-      <!-- 応援会員 -->
-      <div class="plan-card reveal">
-        <div class="plan-name">応援会員</div>
-        <div class="plan-price">¥300〜<span> / 月</span></div>
-        <div class="plan-desc">Sublyの開発を応援しながら、全機能＋グループ機能を使えます。</div>
-        <div class="plan-features">
-          <div class="plan-feat">登録無制限</div>
-          <div class="plan-feat">グラフ・カレンダー</div>
-          <div class="plan-feat">クラウド同期</div>
-          <div class="plan-feat">マルチデバイス対応</div>
           <div class="plan-feat">グループ機能</div>
-          <div class="plan-feat">最初の2週間無料</div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -683,7 +670,6 @@ footer a{color:var(--p);text-decoration:underline}
     <div class="faq-list">
       <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">無料プランでどこまで使えますか？</div><div class="faq-a"><p>無料プランではサブスクを6件まで登録できます。グラフ・カレンダー・クラウド同期・マルチデバイス対応など主要機能はすべて使えます。7件以上登録したい場合はProプランへのアップグレードをご検討ください。</p></div></div>
       <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Proプランはどんなプランですか？</div><div class="faq-a"><p>¥980の買い切りプランです。一度購入すれば追加料金なしで永久にご利用いただけます。登録件数が無制限になります。</p></div></div>
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">応援会員とは何ですか？</div><div class="faq-a"><p>月額¥300〜¥1,000でSublyの開発を応援していただけるプランです。Pro全機能に加え、家族や友人とサブスクを共有できるグループ機能が使えます。最初の2週間は無料でお試しいただけます。</p></div></div>
       <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">データはどこに保存されますか？</div><div class="faq-a"><p>アカウント作成後はGoogleのFirebaseクラウドに安全に保存されます。アカウントなしでも端末内に保存して使い始められます。</p></div></div>
       <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">iPhoneとAndroidどちらでも使えますか？</div><div class="faq-a"><p>はい、ブラウザで動作するWebアプリですので、iPhoneのSafariでもAndroidのChromeでもPCでもご利用いただけます。</p></div></div>
       <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">銀行口座やクレジットカードの連携は必要ですか？</div><div class="faq-a"><p>不要です。自分で手入力して管理する仕組みです。金融情報を一切取得しないため、安心してご利用いただけます。</p></div></div>
