@@ -52,6 +52,16 @@ section{padding:80px 20px;background:#fff}
 .hero h1{font-size:clamp(32px,7vw,52px);font-weight:800;line-height:1.2;margin-bottom:18px;letter-spacing:-.5px}
 .hero h1 em{font-style:normal;color:var(--p)}
 .hero-sub{font-size:16px;color:var(--ts);line-height:1.8;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+/* ── ログインボタン (Pattern F) ── */
+.lp-header-actions{display:flex;align-items:center;gap:12px}
+.lp-login-link{font-size:14px;font-weight:700;color:var(--pd);text-decoration:none;padding:8px 14px;border-radius:999px;border:1.5px solid var(--pd);transition:all .15s}
+.lp-login-link:hover{background:var(--pd);color:#fff}
+.hero-login-btn{display:inline-flex;align-items:center;justify-content:center;background:#F4F0E8;color:var(--pd);font-size:14px;font-weight:700;padding:14px 36px;border-radius:999px;text-decoration:none;border:1px solid #E0E5E2;margin-top:14px;margin-left:8px;transition:transform .15s,box-shadow .15s}
+.hero-login-btn:hover{box-shadow:0 4px 12px rgba(0,0,0,.1);transform:translateY(-1px)}
+.final-login-btn{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.15);color:#fff;font-size:14px;font-weight:700;padding:14px 36px;border-radius:999px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);margin-top:14px;margin-left:8px;transition:all .15s}
+.final-login-btn:hover{background:rgba(255,255,255,.25);transform:translateY(-1px)}
+@media(max-width:480px){.lp-header-actions{gap:8px}.lp-login-link{font-size:12px;padding:6px 10px}.hero-login-btn,.final-login-btn{display:flex;width:100%;margin-left:0;box-sizing:border-box}}
+
 .hero-cta{display:inline-block;background:linear-gradient(135deg,var(--p),var(--pd));color:#fff;font-size:17px;font-weight:800;padding:18px 48px;border-radius:16px;box-shadow:0 8px 30px rgba(62,107,98,.35);transition:transform .15s,box-shadow .15s;cursor:pointer;letter-spacing:.5px;border:none;font-family:inherit}
 .hero-cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(62,107,98,.45)}
 .hero-cta:active{transform:scale(.97)}
@@ -275,7 +285,10 @@ footer a{color:var(--p);text-decoration:underline}
 
 <header class="lp-header">
   <div class="lp-logo">Subly</div>
-  <a href="https://app.subly.jp" class="lp-cta-sm">無料で始める</a>
+  <div class="lp-header-actions">
+    <a href="https://app.subly.jp/?action=login" class="lp-login-link">ログイン</a>
+    <a href="https://app.subly.jp" class="lp-cta-sm">無料で始める</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -294,6 +307,9 @@ footer a{color:var(--p);text-decoration:underline}
   <h1>サブスクを、<br><em>見える化しよう。</em></h1>
   <p class="hero-sub">毎月いくら払っているか、<b>全部言えますか？</b><br>無料プランから今すぐ始められます。</p>
   <a href="https://app.subly.jp" class="hero-cta">無料で始める</a>
+  <a href="https://app.subly.jp/?action=login" class="hero-login-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>アカウントをお持ちの方
+  </a>
   <a href="#features" class="hero-link">機能を見る ↓</a>
   <div class="hero-mock-wrap reveal">
     <div class="hero-mock">
@@ -706,6 +722,9 @@ footer a{color:var(--p);text-decoration:underline}
   <h2>今日から、サブスクを<br><em>自分でコントロールしよう。</em></h2>
   <p>無料プランから今すぐ始められます。アップグレードはいつでも。</p>
   <a href="https://app.subly.jp" class="final-btn">無料で始める</a>
+  <a href="https://app.subly.jp/?action=login" class="final-login-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>アカウントをお持ちの方
+  </a>
   <div class="final-tags">
     <span class="final-tag">無料プランあり</span><span class="final-tag">クラウド同期</span><span class="final-tag">マルチデバイス</span><span class="final-tag">インストール不要</span>
   </div>
