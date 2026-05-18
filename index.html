@@ -192,7 +192,61 @@ section{padding:80px 20px;background:#fff}
 .persona-disclaimer-text strong{color:var(--tx);font-weight:700}
 
 /* ── ヒーローキャンペーンバッジ強調 ── */
+
+/* ▼ ヒーロー内 キャンペーンカード ▼ */
+.hero-campaign-card{display:inline-block;background:#fff;border:2px solid #E24B4A;border-radius:18px;padding:18px 28px 14px;margin-bottom:24px;box-shadow:0 8px 32px rgba(226,75,74,.2);position:relative;animation:campaignPulse 2.5s ease-in-out infinite}
+.hero-campaign-ribbon{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#FF6B9D,#E24B4A);color:#fff;font-size:11px;font-weight:800;padding:4px 14px;border-radius:999px;letter-spacing:1.5px;box-shadow:0 2px 8px rgba(226,75,74,.4);white-space:nowrap}
+.hero-campaign-inner{display:flex;align-items:center;gap:14px;justify-content:center;margin-top:6px}
+.hero-campaign-old{text-align:left}
+.hero-campaign-old-lbl{font-size:10px;color:#999;letter-spacing:.5px;margin-bottom:2px}
+.hero-campaign-old-val{font-size:18px;font-weight:700;color:#999;text-decoration:line-through;line-height:1}
+.hero-campaign-arrow{font-size:22px;font-weight:800;color:#E24B4A}
+.hero-campaign-new{text-align:left}
+.hero-campaign-new-lbl{font-size:10px;color:#E24B4A;font-weight:700;letter-spacing:1.5px;margin-bottom:2px}
+.hero-campaign-new-val{font-size:32px;font-weight:800;color:#E24B4A;line-height:1}
+.hero-campaign-note{font-size:11px;color:#666;margin-top:10px;font-weight:500}
+
+@keyframes campaignPulse{
+  0%,100%{box-shadow:0 8px 32px rgba(226,75,74,.2)}
+  50%{box-shadow:0 8px 40px rgba(226,75,74,.35)}
+}
+
+@media(max-width:600px){
+  .hero-campaign-card{padding:16px 20px 12px}
+  .hero-campaign-old-val{font-size:16px}
+  .hero-campaign-arrow{font-size:18px}
+  .hero-campaign-new-val{font-size:28px}
+  .hero-campaign-note{font-size:10px}
+}
+
 .hero-badge.campaign-active{background:linear-gradient(135deg,var(--p) 0%,#7BAFA3 100%);color:#fff;font-weight:700;animation:pulse-badge 2s ease-in-out infinite}
+
+/* ▼ ヒーロー内 キャンペーンカード ▼ */
+.hero-campaign-card{display:inline-block;background:#fff;border:2px solid #E24B4A;border-radius:18px;padding:18px 28px 14px;margin-bottom:24px;box-shadow:0 8px 32px rgba(226,75,74,.2);position:relative;animation:campaignPulse 2.5s ease-in-out infinite}
+.hero-campaign-ribbon{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#FF6B9D,#E24B4A);color:#fff;font-size:11px;font-weight:800;padding:4px 14px;border-radius:999px;letter-spacing:1.5px;box-shadow:0 2px 8px rgba(226,75,74,.4);white-space:nowrap}
+.hero-campaign-inner{display:flex;align-items:center;gap:14px;justify-content:center;margin-top:6px}
+.hero-campaign-old{text-align:left}
+.hero-campaign-old-lbl{font-size:10px;color:#999;letter-spacing:.5px;margin-bottom:2px}
+.hero-campaign-old-val{font-size:18px;font-weight:700;color:#999;text-decoration:line-through;line-height:1}
+.hero-campaign-arrow{font-size:22px;font-weight:800;color:#E24B4A}
+.hero-campaign-new{text-align:left}
+.hero-campaign-new-lbl{font-size:10px;color:#E24B4A;font-weight:700;letter-spacing:1.5px;margin-bottom:2px}
+.hero-campaign-new-val{font-size:32px;font-weight:800;color:#E24B4A;line-height:1}
+.hero-campaign-note{font-size:11px;color:#666;margin-top:10px;font-weight:500}
+
+@keyframes campaignPulse{
+  0%,100%{box-shadow:0 8px 32px rgba(226,75,74,.2)}
+  50%{box-shadow:0 8px 40px rgba(226,75,74,.35)}
+}
+
+@media(max-width:600px){
+  .hero-campaign-card{padding:16px 20px 12px}
+  .hero-campaign-old-val{font-size:16px}
+  .hero-campaign-arrow{font-size:18px}
+  .hero-campaign-new-val{font-size:28px}
+  .hero-campaign-note{font-size:10px}
+}
+
 .hero-badge.campaign-active .hero-dot{background:#fff;box-shadow:0 0 8px rgba(255,255,255,.6)}
 @keyframes pulse-badge{0%,100%{box-shadow:0 4px 12px rgba(92,142,132,.3)}50%{box-shadow:0 4px 20px rgba(92,142,132,.5)}}
 
@@ -266,7 +320,21 @@ footer a{color:var(--p);text-decoration:underline}
 </header>
 
 <section class="hero">
-  <div class="hero-badge campaign-active"><div class="hero-dot"></div>🎉 リリース記念キャンペーン・全機能無料公開中</div>
+  <div class="hero-campaign-card">
+    <div class="hero-campaign-ribbon">🎉 LIMITED OFFER</div>
+    <div class="hero-campaign-inner">
+      <div class="hero-campaign-old">
+        <div class="hero-campaign-old-lbl">通常価格</div>
+        <div class="hero-campaign-old-val">¥980</div>
+      </div>
+      <div class="hero-campaign-arrow">→</div>
+      <div class="hero-campaign-new">
+        <div class="hero-campaign-new-lbl">今だけ</div>
+        <div class="hero-campaign-new-val">¥0</div>
+      </div>
+    </div>
+    <div class="hero-campaign-note">リリース記念キャンペーン中・Pro機能が全部無料</div>
+  </div>
   <h1>サブスクを、<br><em>見える化しよう。</em></h1>
   <p class="hero-sub">毎月いくら払っているか、<b>全部言えますか？</b><br>無料プランから今すぐ始められます。</p>
   <a href="https://app.subly.jp" class="hero-cta">無料で始める</a>
