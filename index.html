@@ -3,448 +3,349 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Subly（サブリー）— サブスクを、見える化しよう。</title>
-<meta name="description" content="毎月いくら払っているか、全部把握できていますか？Sublyは完全無料・広告なしのサブスク管理アプリです。クラウド同期・グラフ・カレンダー対応。">
-<meta property="og:title" content="Subly — サブスクを、見える化しよう。">
-<meta property="og:description" content="完全無料・広告なし。登録30秒でサブスクを一目で管理。">
+<title>Subly（サブリー）｜サブスクの支出を、1日あたりで見えるように</title>
+<meta name="description" content="Sublyは、契約中のサブスクを登録するだけで月額・年額・1日あたりの支出を計算し、更新日と見直し候補を教えてくれる無料のサブスク管理アプリです。有料プラン・アプリ内課金・広告はありません。">
+<meta property="og:title" content="Subly｜サブスクの支出を、1日あたりで見えるように">
+<meta property="og:description" content="完全無料・広告なし。契約中のサブスクを登録するだけで、月額・年額・1日あたりの支出がわかります。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://subly.jp/">
 <meta property="og:site_name" content="Subly">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://subly.jp/ogp.png">
-<meta property="og:image:secure_url" content="https://subly.jp/ogp.png">
-<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Subly — サブスクを、見える化。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Subly — サブスクを、見える化しよう。">
-<meta name="twitter:description" content="完全無料・広告なし。登録30秒でサブスクを一目で管理。">
 <meta name="twitter:image" content="https://subly.jp/ogp.png">
-<meta name="theme-color" content="#0B7A8A">
-<meta name="color-scheme" content="light">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNUM4RTg0Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojM0E2QjYwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTAiIGZpbGw9InVybCgjYmcpIi8+PHBhdGggZD0iTTI1NiA5MCBMMzgwIDEzOCBMMzgwIDI1NiBDMzgwIDMzMCAzMjYgMzkwIDI1NiA0MTUgQzE4NiAzOTAgMTMyIDMzMCAxMzIgMjU2IEwxMzIgMTM4IFoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4yNSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjUpIiBzdHJva2Utd2lkdGg9IjgiLz48dGV4dCB4PSIyNTYiIHk9IjMxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSI+UzwvdGV4dD48L3N2Zz4=">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#2E5E52">
+<link rel="icon" type="image/png" href="icon-64.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+:root{
+  --paper:#F6F8F4;
+  --ink:#1C2A24;
+  --ink-soft:#4E5F57;
+  --forest:#2E5E52;
+  --forest-deep:#20463C;
+  --sage:#DCE8E1;
+  --line:#CBD9D1;
+  --leaf:#B9D45A;
+  --white:#FFFFFF;
+  --display:'Zen Maru Gothic','Noto Sans JP',sans-serif;
+  --body:'Noto Sans JP',sans-serif;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html{color-scheme:light}
-:root{--p:#0B7A8A;--pd:#075E6B;--pl:#E2F1F3;--bg:#F5F5F0;--card:#fff;--tx:#2B3830;--ts:#6E847C;--bd:#D8E0DC;--r:16px}
-body{font-family:'DM Sans','Noto Sans JP',sans-serif;background:#F5F5F0;color:#2B3830;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--body);font-size:16px;line-height:1.85;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.num{font-variant-numeric:tabular-nums}
 
-/* ── ヘッダー ── */
-.lp-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,245,240,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.05);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-.lp-logo{font-size:20px;font-weight:800;color:var(--p);letter-spacing:2px}
-.lp-cta-sm{background:var(--p);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;box-shadow:0 2px 8px rgba(7,94,107,.2)}
-.lp-cta-sm:hover{background:var(--pd);box-shadow:0 4px 14px rgba(7,94,107,.3)}
+/* header */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(246,248,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:900;font-size:22px;color:var(--forest);letter-spacing:.02em}
+.brand img{width:34px;height:34px;border-radius:9px}
+.site-nav{display:flex;align-items:center;gap:28px;font-size:14px}
+.site-nav a{text-decoration:none;color:var(--ink-soft)}
+.site-nav a:hover{color:var(--ink)}
+.site-nav a.btn-primary,.site-nav a.btn-primary:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:700;text-decoration:none;border-radius:999px;transition:background-color .15s}
+.btn-primary{background:var(--forest);color:#fff;padding:14px 26px;font-size:15px}
+.btn-primary:hover{background:var(--forest-deep)}
+.btn-small{padding:9px 18px;font-size:13px}
+.btn-quiet{color:var(--forest);padding:14px 4px;font-size:15px;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+@media (max-width:720px){.site-nav .nav-link{display:none}}
 
-/* ── セクション共通 ── */
-section{padding:80px 20px;background:#fff}
-.sec-inner{max-width:720px;margin:0 auto}
-.sec-badge{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--p);text-transform:uppercase;margin-bottom:12px}
-.sec-title{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.3;margin-bottom:18px}
-.sec-title em{font-style:normal;color:var(--p)}
-.sec-desc{font-size:15px;color:var(--ts);line-height:1.8;max-width:560px}
+/* hero */
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(34px,5.4vw,56px);line-height:1.32;letter-spacing:.01em;margin-bottom:24px}
+.hero h1 .mark{background:linear-gradient(transparent 62%,var(--leaf) 62%,var(--leaf) 92%,transparent 92%);padding:0 .05em}
+.hero p.lead{font-size:17px;color:var(--ink-soft);max-width:30em;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.hero-note{margin-top:18px;font-size:13px;color:var(--ink-soft)}
+@media (max-width:880px){.hero{padding:44px 0 64px}.hero .wrap{grid-template-columns:1fr;gap:40px}}
 
-/* ── ヒーロー ── */
-.hero{padding:130px 20px 80px;text-align:center;background:linear-gradient(180deg,#E2F1F3 0%,#EEF5F6 40%,#F5F5F0 100%);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-100px;right:-120px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(11,122,138,.10),transparent 65%)}
-.hero::after{content:'';position:absolute;bottom:-80px;left:-100px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(11,122,138,.06),transparent 65%)}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--bd);border-radius:30px;padding:7px 18px;font-size:12px;font-weight:700;color:var(--p);margin-bottom:28px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.hero-dot{width:7px;height:7px;border-radius:50%;background:#4CAF50;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:clamp(32px,7vw,52px);font-weight:800;line-height:1.2;margin-bottom:18px;letter-spacing:-.5px}
-.hero h1 em{font-style:normal;color:var(--p)}
-.hero-sub{font-size:16px;color:var(--ts);line-height:1.8;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
-.hero-cta{display:inline-block;background:linear-gradient(135deg,var(--p),var(--pd));color:#fff;font-size:17px;font-weight:800;padding:18px 48px;border-radius:16px;box-shadow:0 8px 30px rgba(7,94,107,.35);transition:transform .15s,box-shadow .15s;cursor:pointer;letter-spacing:.5px;border:none;font-family:inherit}
-.hero-cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(7,94,107,.45)}
-.hero-cta:active{transform:scale(.97)}
-.hero-link{display:block;margin-top:14px;font-size:13px;color:var(--ts);font-weight:500}
+/* calculator */
+.calc{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:26px 26px 22px;box-shadow:0 18px 40px -24px rgba(32,70,60,.35)}
+.calc h2{font-family:var(--display);font-weight:700;font-size:18px;margin-bottom:4px}
+.calc .hint{font-size:13px;color:var(--ink-soft);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{appearance:none;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-family:var(--body);font-size:13px;font-weight:500;padding:7px 12px 7px 11px;border-radius:10px;cursor:pointer;display:inline-flex;gap:6px;align-items:baseline}
+.chip .p{font-size:12px;color:var(--ink-soft)}
+.chip[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.chip[aria-pressed="true"] .p{color:#CFE2D9}
+.totals{border-top:2px dashed var(--line);padding-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.totals dt{font-size:12px;color:var(--ink-soft)}
+.totals dd{font-family:var(--display);font-weight:900;font-size:clamp(20px,3vw,26px);line-height:1.3}
+.totals .year dd{color:var(--forest)}
+.calc .foot{margin-top:14px;font-size:11.5px;color:var(--ink-soft)}
 
-/* ── モックUI ── */
-.hero-mock-wrap{max-width:440px;margin:48px auto 0;perspective:1000px}
-.hero-mock{background:#fff;border-radius:20px;box-shadow:0 20px 70px rgba(7,94,107,.12),0 4px 16px rgba(0,0,0,.06);text-align:left;position:relative;overflow:hidden;transform:rotateY(-4deg) rotateX(2deg);transition:transform .4s ease}
-.hero-mock:hover{transform:rotateY(0) rotateX(0)}
-.mock-top{background:linear-gradient(135deg,var(--p),var(--pd));padding:18px 22px 14px;display:flex;align-items:center;justify-content:space-between}
-.mock-logo{font-size:17px;font-weight:800;color:#fff;letter-spacing:1.5px}
-.mock-body{padding:18px 20px 20px}
-.mock-sum{background:var(--pl);border-radius:14px;padding:18px;margin-bottom:16px;text-align:center}
-.mock-sum-lbl{font-size:11px;color:var(--ts);font-weight:600;margin-bottom:4px}
-.mock-sum-val{font-size:32px;font-weight:800;color:var(--p);line-height:1}
-.mock-sum-sub{font-size:11px;color:var(--ts);margin-top:6px}
-.mock-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #EEF2F0}
-.mock-row:last-child{border-bottom:none}
-.mock-row-dot{width:8px;height:8px;border-radius:3px;flex-shrink:0}
-.mock-row-name{flex:1;font-size:13px;font-weight:700;color:var(--tx)}
-.mock-row-amt{font-size:13px;font-weight:700;color:var(--tx)}
-.mock-row-daily{font-size:11px;color:var(--p);font-weight:700;margin-left:6px}
-.mock-float{position:absolute;top:16px;right:-10px;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 8px 28px rgba(0,0,0,.1);text-align:center;z-index:2;transform:rotate(3deg);border:1.5px solid #E2F1F3}
-.mock-float-lbl{font-size:9px;color:var(--ts);font-weight:600}
-.mock-float-val{font-size:18px;font-weight:800;color:var(--pd);line-height:1.1}
-.mock-float-sub{font-size:9px;color:var(--ts);margin-top:2px}
-.mock-float2{position:absolute;bottom:20px;left:-14px;background:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 6px 20px rgba(0,0,0,.08);text-align:center;z-index:2;transform:rotate(-2deg);border:1.5px solid #E2F1F3}
-.mock-float2-lbl{font-size:9px;color:var(--ts);font-weight:600}
-.mock-float2-val{font-size:20px;font-weight:800;color:var(--p);line-height:1}
+/* sections */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-family:var(--display);font-weight:900;font-size:clamp(26px,3.6vw,38px);line-height:1.4;margin-bottom:14px}
+.sec-head p{color:var(--ink-soft)}
+@media (max-width:720px){section{padding:72px 0}}
 
-/* ── 問題提起 ── */
-.problem-section{background:#F5F9FA}
-.problem-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
-@media(min-width:540px){.problem-grid{grid-template-columns:1fr 1fr}}
-.problem-card{background:#fff;border-radius:var(--r);padding:24px 20px;border-left:4px solid var(--p);transition:transform .15s;box-shadow:0 1px 6px rgba(0,0,0,.03)}
-.problem-card:hover{transform:translateY(-2px)}
-.problem-num{font-size:11px;font-weight:700;color:var(--p);letter-spacing:1px;margin-bottom:8px}
-.problem-card h4{font-size:15px;font-weight:700;margin-bottom:8px;line-height:1.4}
-.problem-card p{font-size:13px;color:var(--ts);line-height:1.7}
+/* features: screenshots */
+.features{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feature{display:grid;grid-template-columns:240px 1fr;gap:64px;align-items:center;padding:36px 0}
+.feature + .feature{border-top:1px solid var(--sage)}
+.feature.flip{grid-template-columns:1fr 240px}
+.feature.flip .shot{order:2}
+.shot{background:var(--sage);border-radius:30px;padding:14px;justify-self:center}
+.shot img{width:212px;border-radius:20px;border:1px solid rgba(0,0,0,.06)}
+.feature h3{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.5;margin-bottom:12px}
+.feature p{color:var(--ink-soft);max-width:28em}
+@media (max-width:760px){.feature,.feature.flip{grid-template-columns:1fr;gap:28px}.feature.flip .shot{order:0}.shot{justify-self:start}}
 
-/* ── 機能紹介 ── */
-.feature{padding:60px 20px;background:#fff}
-.feature.alt{background:#F5F9FA}
-.feature-inner{max-width:720px;margin:0 auto}
-.feature-num{font-size:48px;font-weight:800;color:var(--pl);line-height:1;margin-bottom:6px}
-.feature-mock{background:#fff;border-radius:var(--r);box-shadow:0 4px 20px rgba(0,0,0,.06);padding:20px;margin-top:24px;overflow:hidden;border:1px solid #EEF2F0}
-.f1-chart{display:flex;align-items:center;gap:20px}
-.f1-donut{width:120px;height:120px;border-radius:50%;background:conic-gradient(#E05C5C 0% 28%,#4A7EC8 28% 54%,#2A9D8F 54% 72%,#9B59B6 72% 84%,#7F8C8D 84% 100%);position:relative;flex-shrink:0}
-.f1-donut-hole{position:absolute;inset:24px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column}
-.f1-donut-val{font-size:16px;font-weight:800;color:var(--tx);line-height:1}
-.f1-donut-lbl{font-size:9px;color:var(--ts);margin-top:3px}
-.f1-legend{display:flex;flex-direction:column;gap:8px;flex:1}
-.f1-leg{display:flex;align-items:center;gap:8px;font-size:13px}
-.f1-leg-dot{width:10px;height:10px;border-radius:4px;flex-shrink:0}
-.f1-leg-name{flex:1;font-weight:600;color:var(--tx)}
-.f1-leg-amt{font-weight:700;color:var(--ts)}
-.f1-leg-daily{font-size:11px;color:var(--p);font-weight:700}
-.f1-total{margin-top:14px;background:var(--pl);border-radius:10px;padding:12px 16px;text-align:center}
-.f1-total-lbl{font-size:11px;color:var(--ts);font-weight:600}
-.f1-total-val{font-size:24px;font-weight:800;color:var(--p);margin-top:2px}
-.f2-list{display:flex;flex-direction:column;gap:10px}
-.f2-item{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#F5F9FA;border-radius:10px}
-.f2-item-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.f2-item-body{flex:1}.f2-item-name{font-size:14px;font-weight:700}
-.f2-item-stars{font-size:13px;letter-spacing:1px}
-.f2-item-price{font-size:14px;font-weight:700;color:var(--ts)}
-.f2-alert{margin-top:12px;background:#FFF5F5;border-left:3px solid #E05C5C;border-radius:8px;padding:10px 14px;font-size:13px;color:#8B3A3A;font-weight:600;line-height:1.6}
-.f3-list{display:flex;flex-direction:column;gap:10px}
-.f3-item{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#F5F9FA;border-radius:10px}
-.f3-item-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.f3-item-body{flex:1}.f3-item-name{font-size:14px;font-weight:700}
-.f3-item-desc{font-size:12px;color:var(--ts)}
-.f3-item-save{font-size:15px;font-weight:800;color:#27AE60;white-space:nowrap}
+/* free */
+.free .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.free .sec-head{margin-bottom:0}
+.free ul{list-style:none;border-top:1px solid var(--line)}
+.free li{display:flex;justify-content:space-between;gap:16px;padding:16px 2px;border-bottom:1px solid var(--line)}
+.free li span:last-child{font-weight:700;color:var(--forest);white-space:nowrap}
+@media (max-width:760px){.free .wrap{grid-template-columns:1fr;gap:32px}}
 
-/* ── プラン ── */
-.plan-section{background:#F5F9FA}
-.plan-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
-@media(min-width:600px){.plan-grid{grid-template-columns:1fr 1fr 1fr}}
-.plan-card{background:#fff;border-radius:var(--r);padding:28px 22px;box-shadow:0 2px 12px rgba(0,0,0,.05);position:relative;border:2px solid transparent;transition:transform .15s}
-.plan-card:hover{transform:translateY(-3px)}
-.plan-card.recommended{border-color:var(--p)}
-.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--p);color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;white-space:nowrap}
-.plan-name{font-size:18px;font-weight:800;margin-bottom:6px}
-.plan-price{font-size:28px;font-weight:800;color:var(--p);margin-bottom:4px}
-.plan-price span{font-size:13px;color:var(--ts);font-weight:500}
-.plan-desc{font-size:13px;color:var(--ts);margin-bottom:16px;line-height:1.6}
-.plan-features{display:flex;flex-direction:column;gap:8px}
-.plan-feat{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--tx)}
-.plan-feat::before{content:'✓';color:var(--p);font-weight:700;flex-shrink:0}
-.plan-feat.muted{color:var(--ts)}
-.plan-feat.muted::before{content:'–';color:var(--bd)}
+/* steps */
+.steps{background:var(--forest);color:#EAF2EE}
+.steps .sec-head p{color:#BFD3C9}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid rgba(255,255,255,.25);padding-top:20px}
+.steps li::before{content:counter(s);display:block;font-family:var(--display);font-weight:900;font-size:44px;line-height:1;color:var(--leaf);margin-bottom:14px}
+.steps h3{font-family:var(--display);font-size:19px;font-weight:700;color:#fff;margin-bottom:6px}
+.steps li p{font-size:15px;color:#BFD3C9}
+@media (max-width:760px){.steps ol{grid-template-columns:1fr;gap:24px}}
 
-/* ── ステップ ── */
-.steps-section{background:#fff}
-.steps-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}
-@media(min-width:540px){.steps-grid{grid-template-columns:1fr 1fr}}
-.step-card{background:#F5F9FA;border-radius:var(--r);padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.04);position:relative;overflow:hidden}
-.step-card::before{content:attr(data-step);position:absolute;top:12px;right:16px;font-size:48px;font-weight:900;color:var(--pl);line-height:1}
-.step-card h4{font-size:15px;font-weight:700;margin-bottom:8px;position:relative}
-.step-card p{font-size:13px;color:var(--ts);line-height:1.7;position:relative}
+/* safety */
+.safety dl{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.safety dt{font-family:var(--display);font-weight:700;font-size:18px;margin-bottom:8px;padding-left:14px;border-left:4px solid var(--leaf)}
+.safety dd{color:var(--ink-soft);font-size:15px}
+@media (max-width:760px){.safety dl{grid-template-columns:1fr;gap:28px}}
 
-/* ── 安心 ── */
-.trust-section{background:#fff}
-.trust-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:28px}
-@media(min-width:540px){.trust-grid{grid-template-columns:1fr 1fr}}
-.trust-card{background:#F5F9FA;border-radius:var(--r);padding:22px 20px;display:flex;gap:14px;align-items:flex-start}
-.trust-icon{width:40px;height:40px;border-radius:11px;background:var(--pl);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.trust-icon svg{width:20px;height:20px;fill:var(--p)}
-.trust-card h4{font-size:14px;font-weight:700;margin-bottom:4px}
-.trust-card p{font-size:13px;color:var(--ts);line-height:1.6}
+/* faq */
+.faq{background:var(--white);border-top:1px solid var(--line)}
+.faq .wrap{max-width:800px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 2px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:10px;height:10px;border-right:2px solid var(--forest);border-bottom:2px solid var(--forest);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 2px 22px;color:var(--ink-soft);max-width:40em}
 
-/* ── 口コミ ── */
-.voice-section{background:#F5F9FA}
-.voice-grid{display:flex;flex-direction:column;gap:16px;margin-top:28px}
-.voice-card{background:#fff;border-radius:var(--r);padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.voice-text{font-size:14px;line-height:1.8;color:var(--tx);margin-bottom:12px;font-style:italic}
-.voice-author{font-size:12px;color:var(--ts);font-weight:600}
+/* closing */
+.closing{text-align:left}
+.closing .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.closing h2{font-family:var(--display);font-weight:900;font-size:clamp(24px,3.4vw,34px);line-height:1.45;max-width:18em}
 
-/* ── FAQ ── */
-.faq-section{background:#fff}
-.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:28px}
-.faq-item{background:#F5F9FA;border-radius:var(--r);overflow:hidden}
-.faq-q{padding:16px 20px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between;-webkit-tap-highlight-color:transparent;transition:background .12s}
-.faq-q:hover{background:#EEF2F0}
-.faq-q::after{content:'+';font-size:20px;color:var(--ts);transition:transform .2s}
-.faq-q.open::after{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
-.faq-a.open{max-height:300px;padding:0 20px 16px}
-.faq-a p{font-size:13px;color:var(--ts);line-height:1.8}
+/* footer */
+.site-footer{border-top:1px solid var(--line);padding:36px 0 44px;font-size:13px;color:var(--ink-soft)}
+.site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:20px}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
 
-/* ── インストール ── */
-.install-section{background:#F5F9FA}
-.install-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
-@media(min-width:540px){.install-grid{grid-template-columns:1fr 1fr}}
-.install-card{background:#fff;border-radius:var(--r);padding:22px 20px;box-shadow:0 1px 6px rgba(0,0,0,.03)}
-.install-card h4{font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.install-step{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
-.install-num{width:22px;height:22px;border-radius:50%;background:var(--p);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.install-step p{font-size:13px;color:var(--ts);line-height:1.5}
-
-/* ── 最終CTA ── */
-.final-cta{background:linear-gradient(135deg,var(--p),var(--pd));padding:80px 20px;text-align:center;color:#fff}
-.final-cta h2{font-size:clamp(24px,5vw,36px);font-weight:800;line-height:1.3;margin-bottom:12px}
-.final-cta h2 em{font-style:normal;color:rgba(255,255,255,.75)}
-.final-cta p{font-size:14px;color:rgba(255,255,255,.8);margin-bottom:32px}
-.final-btn{display:inline-block;background:#fff;color:var(--pd);font-size:17px;font-weight:800;padding:18px 48px;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.15);transition:transform .15s;cursor:pointer;border:none;font-family:inherit;letter-spacing:.5px}
-.final-btn:hover{transform:translateY(-2px)}
-.final-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
-.final-tag{font-size:12px;font-weight:700;color:rgba(255,255,255,.7);background:rgba(255,255,255,.12);border-radius:20px;padding:5px 14px}
-footer{padding:28px 20px;text-align:center;font-size:11px;color:#6E847C;border-top:1px solid #D8E0DC;background:#F5F5F0}
-footer a{color:var(--p);text-decoration:underline}
-@media(max-width:480px){section{padding:60px 16px}.feature{padding:48px 16px}}
+/* one load moment */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.calc{animation:rise .7s .15s both cubic-bezier(.2,.7,.2,1)}
 </style>
 </head>
 <body>
 
-<header class="lp-header">
-  <div class="lp-logo">Subly</div>
-  <a href="https://app.subly.jp" class="lp-cta-sm">無料で始める</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="icon-64.png" alt="" width="34" height="34">Subly</a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a class="nav-link" href="#features">できること</a>
+      <a class="nav-link" href="#faq">よくある質問</a>
+      <a class="btn btn-primary btn-small" href="https://app.subly.jp">Sublyを開く</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="hero-badge"><div class="hero-dot"></div>完全無料・広告なし</div>
-  <h1>サブスクを、<br><em>見える化しよう。</em></h1>
-  <p class="hero-sub">毎月いくら払っているか、<b>全部言えますか？</b><br>すべての機能を無料で、今すぐ始められます。</p>
-  <a href="https://app.subly.jp" class="hero-cta">無料で始める</a>
-  <a href="#features" class="hero-link">機能を見る ↓</a>
-  <div class="hero-mock-wrap reveal">
-    <div class="hero-mock">
-      <div class="mock-float"><div class="mock-float-lbl">節約できそう</div><div class="mock-float-val">¥23,400</div><div class="mock-float-sub">年間 / 3件の見直し候補</div></div>
-      <div class="mock-float2"><div class="mock-float2-lbl">登録数</div><div class="mock-float2-val">14件</div></div>
-      <div class="mock-top"><span class="mock-logo">Subly</span></div>
-      <div class="mock-body">
-        <div class="mock-sum"><div class="mock-sum-lbl">月額合計</div><div class="mock-sum-val">¥18,540</div><div class="mock-sum-sub">年間 ¥222,480 · 1日 ¥609</div></div>
-        <div class="mock-row"><div class="mock-row-dot" style="background:#E05C5C"></div><span class="mock-row-name">Netflix</span><span class="mock-row-amt">¥1,490</span><span class="mock-row-daily">¥49/日</span></div>
-        <div class="mock-row"><div class="mock-row-dot" style="background:#2A9D8F"></div><span class="mock-row-name">Spotify</span><span class="mock-row-amt">¥980</span><span class="mock-row-daily">¥32/日</span></div>
-        <div class="mock-row"><div class="mock-row-dot" style="background:#4A7EC8"></div><span class="mock-row-name">Adobe CC</span><span class="mock-row-amt">¥6,480</span><span class="mock-row-daily">¥213/日</span></div>
-        <div class="mock-row"><div class="mock-row-dot" style="background:#E05C5C"></div><span class="mock-row-name">YouTube Premium</span><span class="mock-row-amt">¥1,280</span><span class="mock-row-daily">¥42/日</span></div>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">毎月のサブスク、<br><span class="mark">1年でいくら</span>か<br>知っていますか。</h1>
+      <p class="lead">Sublyは、契約中のサブスクを登録するだけで、月額・年額・1日あたりの支出を計算するアプリです。更新日をカレンダーで確認でき、あまり使っていないサービスも見つけられます。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://app.subly.jp">無料で使ってみる</a>
+        <a class="btn btn-quiet" href="#features">画面を見る</a>
+      </div>
+      <p class="hero-note">有料プラン・アプリ内課金・広告はありません。iPhoneアプリは近日公開予定です。</p>
+    </div>
+
+    <div class="calc" aria-labelledby="calc-title">
+      <h2 id="calc-title">契約中のものを選んでください</h2>
+      <p class="hint">選ぶたびに、下の合計が変わります。</p>
+      <div class="chips" id="chips"></div>
+      <dl class="totals" aria-live="polite">
+        <div><dt>毎月</dt><dd class="num" id="t-month">¥0</dd></div>
+        <div class="year"><dt>1年間</dt><dd class="num" id="t-year">¥0</dd></div>
+        <div><dt>1日あたり</dt><dd class="num" id="t-day">¥0</dd></div>
+      </dl>
+      <p class="foot">金額はSublyに入っている代表的なプランの月額（税込）です。実際の料金はご契約内容をご確認ください。</p>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="features-title">Sublyでできること</h2>
+      <p>入力するのは、サービス名・金額・更新日だけ。銀行口座やカードとつなぐ必要はありません。</p>
+    </div>
+
+    <div class="feature">
+      <div class="shot"><img src="screen-home.jpg" alt="ホーム画面。月額合計と年額合計、カテゴリ別の円グラフが表示されている" width="212" height="461" loading="lazy"></div>
+      <div>
+        <h3>合計を、月・年・1日で</h3>
+        <p>登録したサブスクをまとめて、月額と年額の合計を表示します。カテゴリ別のグラフで、動画・音楽・仕事など何にいくら使っているかもわかります。</p>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="shot"><img src="screen-chart.jpg" alt="満足度別の支出画面。星の数ごとに月額が表示されている" width="212" height="461" loading="lazy"></div>
+      <div>
+        <h3>満足度で、見直す候補がわかる</h3>
+        <p>それぞれに星1〜3の満足度をつけておくと、満足度の低いサブスクとその金額をまとめて表示します。解約したら年間いくら浮くかも計算します。</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="shot"><img src="screen-calendar.jpg" alt="カレンダー画面。支払日に印がついている" width="212" height="461" loading="lazy"></div>
+      <div>
+        <h3>更新日をカレンダーで確認</h3>
+        <p>いつ、どのサービスの支払いがあるかを月ごとのカレンダーで確認できます。無料期間の終わりや年額プランの更新にも気づけます。</p>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="shot"><img src="screen-list.jpg" alt="明細一覧画面。登録したサブスクが金額と次回の支払日つきで並んでいる" width="212" height="461" loading="lazy"></div>
+      <div>
+        <h3>一覧で管理して、家族とも共有</h3>
+        <p>アカウントを作ると、スマホとパソコンでデータが同期されます。招待コードで家族とグループを作れば、家族全員のサブスクをいっしょに管理できます。</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="problem-section" id="problem">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">Problem</div>
-    <h2 class="sec-title reveal">こんな経験、<em>ありませんか？</em></h2>
-    <p class="sec-desc reveal">サブスクは「痛みを感じにくい支出」。だから気づかないうちに積み上がります。</p>
-    <div class="problem-grid">
-      <div class="problem-card reveal"><div class="problem-num">01</div><h4>使っていないのに払い続けている</h4><p>「いつか使うかも」と思いながら毎月自動引き落とし。気づいたら1年分。</p></div>
-      <div class="problem-card reveal"><div class="problem-num">02</div><h4>何件入っているか把握できない</h4><p>カードや口座の明細を見ても、どれがサブスクか一目でわからない。</p></div>
-      <div class="problem-card reveal"><div class="problem-num">03</div><h4>月額は安くても年間で大きな出費</h4><p>月¥500でも年¥6,000。全部合わせたら年間20万円超えていたケースも。</p></div>
-      <div class="problem-card reveal"><div class="problem-num">04</div><h4>複数デバイスで管理できない</h4><p>スマホで入力して、PCでも確認したい。でも既存アプリは同期が面倒。</p></div>
+<section class="free" aria-labelledby="free-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="free-title">料金はかかりません</h2>
+      <p>Sublyはすべての機能を無料で使えます。有料プラン、アプリ内課金、広告はありません。</p>
     </div>
+    <ul>
+      <li><span>サブスクの登録</span><span>無料</span></li>
+      <li><span>グラフ・カレンダー・満足度</span><span>無料</span></li>
+      <li><span>スマホとパソコンの同期</span><span>無料</span></li>
+      <li><span>家族とのグループ共有</span><span>無料</span></li>
+      <li><span>CSVの書き出し・読み込み</span><span>無料</span></li>
+      <li><span>広告の表示</span><span>なし</span></li>
+    </ul>
   </div>
 </section>
 
-<div id="features">
-  <section class="feature">
-    <div class="feature-inner">
-      <div class="feature-num reveal">01</div>
-      <div class="sec-badge reveal">Visualize</div>
-      <h2 class="sec-title reveal">月額・年額・<em>1日いくら</em>を一目で把握</h2>
-      <p class="sec-desc reveal">カテゴリ別の円グラフで支出を可視化。「月額¥1,490」ではなく「1日¥49」で表示することで、支出の本当の重さを実感できます。</p>
-      <div class="feature-mock reveal">
-        <div class="f1-chart">
-          <div class="f1-donut"><div class="f1-donut-hole"><div class="f1-donut-val">¥18,540</div><div class="f1-donut-lbl">月額合計</div></div></div>
-          <div class="f1-legend">
-            <div class="f1-leg"><div class="f1-leg-dot" style="background:#E05C5C"></div><span class="f1-leg-name">動画</span><span class="f1-leg-amt">¥5,290</span><span class="f1-leg-daily">¥174/日</span></div>
-            <div class="f1-leg"><div class="f1-leg-dot" style="background:#4A7EC8"></div><span class="f1-leg-name">仕事</span><span class="f1-leg-amt">¥8,480</span><span class="f1-leg-daily">¥279/日</span></div>
-            <div class="f1-leg"><div class="f1-leg-dot" style="background:#2A9D8F"></div><span class="f1-leg-name">音楽</span><span class="f1-leg-amt">¥1,980</span><span class="f1-leg-daily">¥65/日</span></div>
-            <div class="f1-leg"><div class="f1-leg-dot" style="background:#9B59B6"></div><span class="f1-leg-name">ゲーム</span><span class="f1-leg-amt">¥1,430</span><span class="f1-leg-daily">¥47/日</span></div>
-            <div class="f1-leg"><div class="f1-leg-dot" style="background:#7F8C8D"></div><span class="f1-leg-name">その他</span><span class="f1-leg-amt">¥1,360</span><span class="f1-leg-daily">¥45/日</span></div>
-          </div>
-        </div>
-        <div class="f1-total"><div class="f1-total-lbl">合計 1日あたり</div><div class="f1-total-val">¥609</div></div>
-      </div>
+<section class="steps" aria-labelledby="steps-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="steps-title">はじめ方</h2>
+      <p>アカウントを作らなくても、すぐに試せます。</p>
     </div>
-  </section>
-
-  <section class="feature alt">
-    <div class="feature-inner">
-      <div class="feature-num reveal">02</div>
-      <div class="sec-badge reveal">Evaluate</div>
-      <h2 class="sec-title reveal">満足度評価で<em>いるもの・いらないもの</em>を仕分ける</h2>
-      <p class="sec-desc reveal">各サブスクに満足度を1〜5段階でつけるだけ。低評価のサービスが自動で解約候補になります。</p>
-      <div class="feature-mock reveal">
-        <div class="f2-list">
-          <div class="f2-item"><div class="f2-item-icon" style="background:#E05C5C22"><svg width="18" height="18" viewBox="0 0 24 24" fill="#E05C5C"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></div><div class="f2-item-body"><div class="f2-item-name">Netflix</div><div class="f2-item-stars"><span style="color:#E9A400">★★★★★</span></div></div><div class="f2-item-price">¥1,490</div></div>
-          <div class="f2-item"><div class="f2-item-icon" style="background:#E05C5C22"><svg width="18" height="18" viewBox="0 0 24 24" fill="#E05C5C"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></div><div class="f2-item-body"><div class="f2-item-name">U-NEXT</div><div class="f2-item-stars"><span style="color:#E9A400">★★</span><span style="color:#ddd">☆☆☆</span></div></div><div class="f2-item-price">¥2,189</div></div>
-          <div class="f2-item"><div class="f2-item-icon" style="background:#2A9D8F22"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2A9D8F"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg></div><div class="f2-item-body"><div class="f2-item-name">Audible</div><div class="f2-item-stars"><span style="color:#E9A400">★</span><span style="color:#ddd">☆☆☆☆</span></div></div><div class="f2-item-price">¥1,500</div></div>
-        </div>
-        <div class="f2-alert">見直し候補 2件が見つかりました — 解約で年間 ¥38,628 節約できます</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="feature">
-    <div class="feature-inner">
-      <div class="feature-num reveal">03</div>
-      <div class="sec-badge reveal">Sync</div>
-      <h2 class="sec-title reveal">スマホでもPCでも、<em>クラウドで同期</em></h2>
-      <p class="sec-desc reveal">アカウントを作ればデータをクラウドに保存。スマホで入力したサブスクをPCでも確認できます。カレンダーで更新日も一目でわかります。</p>
-      <div class="feature-mock reveal">
-        <div class="f3-list">
-          <div class="f3-item"><div class="f3-item-dot" style="background:var(--p)"></div><div class="f3-item-body"><div class="f3-item-name">クラウド自動保存</div><div class="f3-item-desc">データはFirebaseに安全に保存。いつでもどこでもアクセス可能。</div></div></div>
-          <div class="f3-item"><div class="f3-item-dot" style="background:#4A7EC8"></div><div class="f3-item-body"><div class="f3-item-name">マルチデバイス対応</div><div class="f3-item-desc">スマホ・PC・タブレット、すべての端末でリアルタイム同期。</div></div></div>
-          <div class="f3-item"><div class="f3-item-dot" style="background:#9B59B6"></div><div class="f3-item-body"><div class="f3-item-name">更新日カレンダー</div><div class="f3-item-desc">支払い日・更新日をカレンダーで確認。うっかり更新を防げます。</div></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- プランセクション -->
-<section class="plan-section" id="plans">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">Plans</div>
-    <h2 class="sec-title reveal">すべての機能が<em>ずっと無料</em></h2>
-    <p class="sec-desc reveal">有料プランはありません。登録件数の上限も、家族との共有も、すべて無料です。</p>
-    <div class="plan-grid" style="grid-template-columns:minmax(0,420px);justify-content:center">
-      <div class="plan-card recommended reveal">
-        <div class="plan-badge">すべて無料</div>
-        <div class="plan-name">Free</div>
-        <div class="plan-price">¥0<span> / ずっと無料</span></div>
-        <div class="plan-desc">アカウント登録（無料）だけで、すべての機能が使えます。アカウントなしでも6件まで登録できます。</div>
-        <div class="plan-features">
-          <div class="plan-feat">登録無制限</div>
-          <div class="plan-feat">グラフ・カレンダー</div>
-          <div class="plan-feat">クラウド同期</div>
-          <div class="plan-feat">マルチデバイス対応</div>
-          <div class="plan-feat">満足度評価・解約候補の表示</div>
-          <div class="plan-feat">グループの作成・招待（家族で共有）</div>
-          <div class="plan-feat">広告なし</div>
-        </div>
-      </div>
-    </div>
+    <ol>
+      <li><h3>Sublyを開く</h3><p>ブラウザで app.subly.jp を開きます。インストールは不要です。</p></li>
+      <li><h3>サブスクを登録する</h3><p>よく使われるサービスは一覧から選ぶだけ。一覧にないものは名前と金額を入力します。</p></li>
+      <li><h3>合計と更新日を確認する</h3><p>ホームで合計を、カレンダーで支払日を確認します。満足度もつけておきましょう。</p></li>
+    </ol>
   </div>
 </section>
 
-<!-- MF風CTAセクション -->
-<section style="background:linear-gradient(160deg,#F0EBE3 0%,#E8E0D5 100%);padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden">
-  <div style="position:absolute;top:-60px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(11,122,138,.08),transparent 70%)"></div>
-  <div style="position:absolute;bottom:-60px;left:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(11,122,138,.06),transparent 70%)"></div>
-  <div class="reveal" style="position:relative">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:var(--p);color:#fff;font-size:12px;font-weight:700;letter-spacing:.5px;padding:8px 20px;border-radius:30px;margin-bottom:24px;box-shadow:0 4px 16px rgba(7,94,107,.3)">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      完全無料
+<section class="safety" aria-labelledby="safety-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="safety-title">安心して使っていただくために</h2>
     </div>
-    <div style="font-size:15px;color:#6B5E52;margin-bottom:12px;font-weight:500;line-height:1.6;white-space:nowrap">Subly会員は平均 <b style="color:#3A3028;font-weight:800">年間¥89,400</b> のサブスク見直しを実感*</div>
-    <h2 style="font-size:clamp(28px,6vw,44px);font-weight:800;line-height:1.2;margin-bottom:8px;color:#2B2018;letter-spacing:-.5px">本気でサブスク管理<br>しませんか？</h2>
-    <div style="font-size:11px;color:#9B8C80;margin-bottom:36px;margin-top:4px">*自社調査より。個人差があります。</div>
-    <a href="https://app.subly.jp" style="display:inline-block;background:linear-gradient(135deg,var(--p),var(--pd));color:#fff;font-size:17px;font-weight:800;padding:18px 52px;border-radius:16px;box-shadow:0 8px 28px rgba(7,94,107,.35);cursor:pointer;text-decoration:none;letter-spacing:.3px;transition:transform .15s">無料で始める</a>
-    <div style="font-size:12px;color:#9B8C80;margin-top:14px">登録無料 · 広告なし · いつでも退会OK</div>
+    <dl>
+      <div><dt>口座やカードとつなぎません</dt><dd>金額はご自身で入力します。銀行口座やクレジットカードの情報を受け取ることはありません。</dd></div>
+      <div><dt>データはGoogleのクラウドに保存</dt><dd>アカウントを作った場合、データはGoogleのFirebaseに保存されます。アカウントがなければ端末の中だけに保存されます。</dd></div>
+      <div><dt>いつでも退会できます</dt><dd>メニューの「アカウント削除」から、アカウントとデータをまとめて削除できます。</dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="steps-section" id="howto">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">How to Start</div>
-    <h2 class="sec-title reveal">たった<em>4ステップ</em>で始められる</h2>
-    <div class="steps-grid">
-      <div class="step-card reveal" data-step="1"><h4>アカウントを作成</h4><p>メールアドレスだけで登録完了。Googleアカウントでもすぐ始められます。</p></div>
-      <div class="step-card reveal" data-step="2"><h4>サブスクを登録</h4><p>Netflix・Spotifyなど定番はワンタップ。自分だけのサービスも追加できます。</p></div>
-      <div class="step-card reveal" data-step="3"><h4>支出を見える化</h4><p>月額・年額・1日いくらが自動計算。グラフとカレンダーで全体像を把握。</p></div>
-      <div class="step-card reveal" data-step="4"><h4>満足度を評価して節約</h4><p>低評価のサービスが解約候補に。浮いたお金を貯金・投資に回そう。</p></div>
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="faq-title">よくある質問</h2>
     </div>
+    <details><summary>料金はかかりますか？</summary><p>かかりません。すべての機能を無料で使えます。有料プラン、アプリ内課金、広告はありません。</p></details>
+    <details><summary>アカウントを作らなくても使えますか？</summary><p>はい。アカウントなしでも使え、データは端末の中に保存されます。スマホとパソコンでの同期や家族との共有には、アカウント（無料）が必要です。</p></details>
+    <details><summary>iPhoneアプリはありますか？</summary><p>現在App Storeの公開準備中です。それまでは、iPhoneのSafariで app.subly.jp を開き、共有ボタンから「ホーム画面に追加」するとアプリのように使えます。</p></details>
+    <details><summary>Androidやパソコンでも使えますか？</summary><p>はい。ChromeなどのブラウザでSublyを開けば使えます。アカウントを作ると、端末どうしでデータが同期されます。</p></details>
+    <details><summary>データはどこに保存されますか？</summary><p>アカウントを作った場合はGoogleのFirebaseに保存されます。アカウントを作らない場合は、お使いの端末の中にだけ保存されます。</p></details>
+    <details><summary>退会するとデータはどうなりますか？</summary><p>メニューの「アカウント削除」を行うと、アカウントと登録したデータはすべて削除され、元に戻すことはできません。必要な場合は、先にCSVで書き出しておいてください。</p></details>
   </div>
 </section>
 
-<section class="trust-section" id="trust">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">Why Subly</div>
-    <h2 class="sec-title reveal">だから<em>安心して</em>使える</h2>
-    <div class="trust-grid">
-      <div class="trust-card reveal"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg></div><div><h4>セキュアなクラウド保存</h4><p>Googleが提供するFirebaseでデータを安全に管理。不正アクセスから守ります。</p></div></div>
-      <div class="trust-card reveal"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div><h4>広告ゼロ</h4><p>どのプランでも広告は一切表示されません。快適な使い心地をお約束します。</p></div></div>
-      <div class="trust-card reveal"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></div><div><h4>インストール不要</h4><p>ブラウザで動作するWebアプリ。iPhone・Android・PC、どの端末でもすぐ使えます。</p></div></div>
-      <div class="trust-card reveal"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><h4>日本製・日本のサービスに特化</h4><p>国内サービスのプリセットを多数収録。安心の国内開発です。</p></div></div>
-    </div>
+<section class="closing" aria-labelledby="closing-title">
+  <div class="wrap">
+    <h2 id="closing-title">まずは、契約中のサブスクを書き出すところから。</h2>
+    <a class="btn btn-primary" href="https://app.subly.jp">無料で使ってみる</a>
   </div>
 </section>
+</main>
 
-<section class="voice-section" id="voice">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">Voice</div>
-    <h2 class="sec-title reveal">使った人の<em>リアルな声</em></h2>
-    <p class="sec-desc reveal">実際にSublyを使ってくれた方のコメントです</p>
-    <div class="voice-grid">
-      <div class="voice-card reveal"><div class="voice-text">「サブスクをまとめたら月2万円以上払っていた。使っていないものを3件解約して、その分を積立NISAに回せました。」</div><div class="voice-author">T.K さん · 30代 会社員</div></div>
-      <div class="voice-card reveal"><div class="voice-text">「クラウド同期が便利。スマホで入力してPCでも確認できる。カレンダーで更新日がわかるので更新し忘れがなくなりました。」</div><div class="voice-author">M.S さん · 20代 フリーランス</div></div>
-    </div>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="サイト情報">
+      <a href="https://app.subly.jp">Sublyを開く</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="tokusho.html">特定商取引法に基づく表記</a>
+      <a href="mailto:jone.lab.app@gmail.com">お問い合わせ</a>
+    </nav>
+    <p>© 2026 Jone Lab</p>
   </div>
-</section>
-
-<section class="faq-section" id="faq">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">FAQ</div>
-    <h2 class="sec-title reveal">よくある<em>質問</em></h2>
-    <div class="faq-list">
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">料金はかかりますか？</div><div class="faq-a"><p>すべての機能を無料でご利用いただけます。アカウント登録（無料）をすると、登録件数の上限なし・クラウド同期・家族とのグループ共有がすべて使えます。</p></div></div>
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">アカウントなしでも使えますか？</div><div class="faq-a"><p>はい。アカウントなしでも6件まで登録でき、データは端末内に保存されます。7件以上の登録やクラウド同期にはアカウント登録（無料）が必要です。</p></div></div>
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">今後も無料で使えますか？</div><div class="faq-a"><p>はい。有料プランやアプリ内課金はなく、すべての機能を無料でご利用いただけます。広告も表示されません。</p></div></div>
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">データはどこに保存されますか？</div><div class="faq-a"><p>アカウント作成後はGoogleのFirebaseクラウドに安全に保存されます。アカウントなしでも端末内に保存して使い始められます。</p></div></div>
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">iPhoneとAndroidどちらでも使えますか？</div><div class="faq-a"><p>はい、ブラウザで動作するWebアプリですので、iPhoneのSafariでもAndroidのChromeでもPCでもご利用いただけます。</p></div></div>
-      <div class="faq-item reveal"><div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">銀行口座やクレジットカードの連携は必要ですか？</div><div class="faq-a"><p>不要です。自分で手入力して管理する仕組みです。金融情報を一切取得しないため、安心してご利用いただけます。</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="install-section" id="install">
-  <div class="sec-inner">
-    <div class="sec-badge reveal">Keep Using</div>
-    <h2 class="sec-title reveal">ホーム画面に追加して<em>アプリとして使おう</em></h2>
-    <p class="sec-desc reveal">ホーム画面に追加すれば普通のアプリと同じようにワンタップで起動できます。</p>
-    <div class="install-grid">
-      <div class="install-card reveal"><h4><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--p)"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg> iPhone / iPad</h4><div class="install-step"><div class="install-num">1</div><p>Safariでapp.subly.jpを開く</p></div><div class="install-step"><div class="install-num">2</div><p>下の共有ボタン（四角に矢印）をタップ</p></div><div class="install-step"><div class="install-num">3</div><p>「ホーム画面に追加」を選んで完了</p></div></div>
-      <div class="install-card reveal"><h4><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--p)"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg> Android</h4><div class="install-step"><div class="install-num">1</div><p>Chromeでapp.subly.jpを開く</p></div><div class="install-step"><div class="install-num">2</div><p>右上の「︙」メニューをタップ</p></div><div class="install-step"><div class="install-num">3</div><p>「ホーム画面に追加」を選んで完了</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <h2>今日から、サブスクを<br><em>自分でコントロールしよう。</em></h2>
-  <p>すべての機能を無料で、今すぐ始められます。</p>
-  <a href="https://app.subly.jp" class="final-btn">無料で始める</a>
-  <div class="final-tags">
-    <span class="final-tag">完全無料</span><span class="final-tag">広告なし</span><span class="final-tag">クラウド同期</span><span class="final-tag">マルチデバイス</span><span class="final-tag">インストール不要</span>
-  </div>
-</section>
-
-<footer>
-  <div style="font-size:16px;font-weight:800;color:var(--p);letter-spacing:2px;margin-bottom:10px">Subly</div>
-  <div style="display:flex;gap:16px;justify-content:center;margin-bottom:12px;font-size:12px;font-weight:600">
-    <a href="https://app.subly.jp">アプリを開く</a>
-    <a href="#features">機能紹介</a>
-    <a href="#plans">料金</a>
-    <a href="https://app.subly.jp/#privacy">プライバシーポリシー</a>
-  </div>
-  <div>&copy; 2026 Jone Lab — Subly. All rights reserved.</div>
 </footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+(function(){
+  var items=[
+    ['Netflix',890],['Amazonプライム',600],['YouTube Premium',1280],['Spotify',1080],
+    ['Apple Music',1080],['Disney+',1250],['U-NEXT',2189],['Hulu',1026],
+    ['iCloud+',130],['Google One',250],['ChatGPT Plus',3000],['Kindle Unlimited',980],
+    ['Microsoft 365',1490],['Adobe CC',6480],['DAZN',4200],['Audible',1500]
+  ];
+  var on={'Netflix':1,'Amazonプライム':1,'YouTube Premium':1,'iCloud+':1};
+  var box=document.getElementById('chips');
+  var yen=function(n){return '¥'+Math.round(n).toLocaleString('ja-JP')};
+  function update(){
+    var m=0;
+    box.querySelectorAll('.chip').forEach(function(b){ if(b.getAttribute('aria-pressed')==='true') m+=+b.dataset.price; });
+    document.getElementById('t-month').textContent=yen(m);
+    document.getElementById('t-year').textContent=yen(m*12);
+    document.getElementById('t-day').textContent=yen(m*12/365);
+  }
+  items.forEach(function(it){
+    var b=document.createElement('button');
+    b.type='button';b.className='chip';b.dataset.price=it[1];
+    b.setAttribute('aria-pressed',on[it[0]]?'true':'false');
+    b.innerHTML='<span></span><span class="p num"></span>';
+    b.firstChild.textContent=it[0];b.lastChild.textContent=yen(it[1]);
+    b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');update();});
+    box.appendChild(b);
+  });
+  update();
+})();
 </script>
 </body>
 </html>
